@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @tailwind base; <-- questa gestisce flex, grid, grid-cols, w, h, colori */
+/* @tailwind utilities; <-- questa gestisce il padding */

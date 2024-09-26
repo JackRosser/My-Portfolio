@@ -1,0 +1,25 @@
+ul li {
+  position: relative;
+  list-style: none;
+  width: 200px;
+  padding: 15px;
+  background: #3e3f46;
+  z-index: calc(1 * var(--i));
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+ul li:hover {
+  background: #02abff;
+  transform: translate(40px, 40px);
+}
+
+ul li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #494a51;
+}
