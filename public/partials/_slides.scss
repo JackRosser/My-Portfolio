@@ -1,0 +1,166 @@
+.slides-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #222;
+}
+
+.slides-container input {
+  appearance: none;
+}
+
+.slides-container .dots {
+  position: absolute;
+  bottom: 70px;
+  z-index: 10000;
+  display: flex;
+  gap: 6px;
+}
+
+.slides-container .dots label {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+}
+
+.slides-container input:nth-child(1):checked ~ .dots label:nth-child(1),
+.slides-container input:nth-child(1):checked ~ .dots label:nth-child(2),
+.slides-container input:nth-child(1):checked ~ .dots label:nth-child(3),
+.slides-container input:nth-child(1):checked ~ .dots label:nth-child(4),
+.slides-container input:nth-child(1):checked ~ .dots label:nth-child(5),
+.slides-container input:nth-child(1):checked ~ .dots label:nth-child(6) {
+  opacity: 1;
+}
+
+.slides-container .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slides-container .slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--img);
+  opacity: 0;
+  background-size: cover;
+  clip-path: circle(0% at 0% 50%);
+  transition: 1.5s;
+  transition-delay: 0s;
+  background-position: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.slides-container .slider .slide:nth-child(even) {
+  clip-path: circle(0% at 100% 50%);
+  background-position: right;
+}
+
+.slides-container input:nth-child(1):checked ~ .slider .slide:nth-child(1),
+.slides-container input:nth-child(1):checked ~ .slider .slide:nth-child(2),
+.slides-container input:nth-child(1):checked ~ .slider .slide:nth-child(3),
+.slides-container input:nth-child(1):checked ~ .slider .slide:nth-child(4),
+.slides-container input:nth-child(1):checked ~ .slider .slide:nth-child(5),
+.slides-container input:nth-child(1):checked ~ .slider .slide:nth-child(6) {
+  clip-path: circle(150% at 50% 50%);
+  transition-delay: 1s;
+  background-position: center;
+}
+
+.content {
+  position: relative;
+  padding: 50px 50px 120px 80px;
+  max-width: 550px;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 3em;
+}
+
+.content p {
+  color: #fff;
+}
+
+// <section class="slides-container">
+// <input id="slide1" type="radio" name="group" checked />
+// <input id="slide2" type="radio" name="group" />
+// <input id="slide3" type="radio" name="group" />
+// <input id="slide4" type="radio" name="group" />
+// <input id="slide5" type="radio" name="group" />
+// <input id="slide6" type="radio" name="group" />
+// <div class="dots">
+//   <label for="slide1"></label>
+//   <label for="slide2"></label>
+//   <label for="slide3"></label>
+//   <label for="slide4"></label>
+//   <label for="slide5"></label>
+//   <label for="slide6"></label>
+// </div>
+// <div class="slider">
+//   <div class="slide1" style="--img: url('img/img1.avif')">
+//     <div class="content">
+//       <h2>Slide 01</h2>
+//       <p>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis hic quia corrupti ducimus voluptatibus dolores recusandae rerum,
+//         odit ratione ea libero expedita aut quaerat sunt minima obcaecati. Est, consequuntur?
+//       </p>
+//     </div>
+//   </div>
+//   <div class="slide2" style="--img: url('img/img2.avif')">
+//     <div class="content">
+//       <h2>Slide 02</h2>
+//       <p>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis hic quia corrupti ducimus voluptatibus dolores recusandae rerum,
+//         odit ratione ea libero expedita aut quaerat sunt minima obcaecati. Est, consequuntur?
+//       </p>
+//     </div>
+//   </div>
+//   <div class="slide3" style="--img: url('img/img3.avif')">
+//     <div class="content">
+//       <h2>Slide 03</h2>
+//       <p>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis hic quia corrupti ducimus voluptatibus dolores recusandae rerum,
+//         odit ratione ea libero expedita aut quaerat sunt minima obcaecati. Est, consequuntur?
+//       </p>
+//     </div>
+//   </div>
+//   <div class="slide4" style="--img: url('img/img4.avif')">
+//     <div class="content">
+//       <h2>Slide 04</h2>
+//       <p>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis hic quia corrupti ducimus voluptatibus dolores recusandae rerum,
+//         odit ratione ea libero expedita aut quaerat sunt minima obcaecati. Est, consequuntur?
+//       </p>
+//     </div>
+//   </div>
+//   <div class="slide5" style="--img: url('img/img5.avif')">
+//     <div class="content">
+//       <h2>Slide 05</h2>
+//       <p>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis hic quia corrupti ducimus voluptatibus dolores recusandae rerum,
+//         odit ratione ea libero expedita aut quaerat sunt minima obcaecati. Est, consequuntur?
+//       </p>
+//     </div>
+//   </div>
+//   <div class="slide6" style="--img: url('img/img6.avif')">
+//     <div class="content">
+//       <h2>Slide 06</h2>
+//       <p>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis hic quia corrupti ducimus voluptatibus dolores recusandae rerum,
+//         odit ratione ea libero expedita aut quaerat sunt minima obcaecati. Est, consequuntur?
+//       </p>
+//     </div>
+//   </div>
+// </div>
+// </section>
