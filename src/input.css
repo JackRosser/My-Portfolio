@@ -13,7 +13,6 @@
     @apply lg:flex-row;
   }
   .myCol {
-    @apply h-1/2;
     @apply border-2;
     @apply lg:w-[50vw];
     @apply lg:h-screen;
@@ -35,22 +34,24 @@
     @apply scale-[0.8];
     @apply md:scale-100;
     @apply hidden;
-    @apply md:block;
+    @apply lg:block;
   }
 
   .myMenuMobile {
     @apply flex;
     @apply flex-col;
-    @apply md:hidden;
+    @apply lg:hidden;
   }
 
   .myMenuMobile > div {
     @apply h-[10vh];
     @apply ps-10;
+    @apply md:ps-0;
     @apply w-screen;
     @apply text-2xl;
     @apply flex;
     @apply justify-start;
+    @apply md:justify-center;
     @apply items-center;
     @apply text-white;
     @apply shadow-inner;
