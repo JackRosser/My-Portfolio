@@ -6,47 +6,60 @@
 /* @tailwind utilities; <-- questa gestisce il padding */
 
 @layer base {
-  .myBox {
-    @apply bg-white;
-    @apply absolute;
-    @apply bottom-0;
-    @apply w-full;
-    @apply h-[60vh];
-    @apply md:h-full;
-    @apply md:w-1/2;
-    @apply md:right-0;
-    @apply lg:rounded-2xl;
-    @apply lg:h-[85vh];
-    @apply lg:mb-[7.5vh];
-    @apply lg:w-[60vw];
-    @apply lg:me-[7.5vw];
-    @apply xl:w-[65vw];
-    @apply xl:h-[90vh];
-    @apply xl:mb-[5vh];
-    @apply xl:me-[5vw];
-    @apply 2xl:w-[73vw];
-    @apply lg:shadow-md;
+  main {
+    @apply flex;
+    @apply flex-col;
+    @apply h-screen;
+    @apply lg:flex-row;
+  }
+  .myCol {
+    @apply h-1/2;
+    @apply border-2;
+    @apply lg:w-[50vw];
+    @apply lg:h-screen;
+    @apply flex;
+    @apply items-start;
+    @apply justify-center;
+    @apply md:items-center;
+    @apply md:justify-center;
+  }
+  .leftCol {
+    @apply lg:w-[30vw];
+  }
+
+  .rightCol {
+    @apply lg:w-[70vw];
   }
 
   .myMenu {
-    @apply top-10;
-    @apply absolute;
-    @apply rotate-90;
-    @apply md:rotate-0;
-    @apply md:top-[30%];
-
-    @apply lg:top-[6rem];
-  }
-}
-
-@layer utilities {
-  .myBox {
-    @apply p-2;
+    @apply scale-[0.8];
+    @apply md:scale-100;
+    @apply hidden;
+    @apply md:block;
   }
 
-  .myMenu {
-    @apply ms-[8rem];
-    @apply md:ms-[15%];
-    @apply lg:ms-24;
+  .myMenuMobile {
+    @apply flex;
+    @apply flex-col;
+    @apply md:hidden;
+  }
+
+  .myMenuMobile > div {
+    @apply h-[10vh];
+    @apply ps-10;
+    @apply w-screen;
+    @apply text-2xl;
+    @apply flex;
+    @apply justify-start;
+    @apply items-center;
+    @apply text-white;
+    @apply shadow-inner;
+  }
+
+  .mobileTouch {
+    @apply bg-[#fbbf24];
+    @apply transition-colors;
+    @apply duration-[300ms];
+    @apply active:bg-[#02abff];
   }
 }

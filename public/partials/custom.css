@@ -93,4 +93,17 @@ ul li a span {
 
 ul li:hover a span {
   opacity: 1;
+}
+
+.mobileAnimation {
+  animation: mobileAppear 500ms ease-out both;
+}
+
+@keyframes mobileAppear {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=custom.css.map */

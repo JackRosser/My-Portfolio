@@ -16,43 +16,72 @@
     <link rel="stylesheet" href="./partials/custom.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="bg-gradient-to-t from-sky-200 via-white to-sky-200">
-    <main class="h-screen">
-      <nav id="menu" class="myMenu">
-        <ul class="skew-y-[-15deg] relative">
-          <li style="--i: 6" data-text="Home">
+  <body class="bg-gradient-to-t from-white to-sky-200">
+    <main>
+      <div class="myCol leftCol">
+        <nav id="menu" class="myMenu">
+          <ul class="skew-y-[-15deg] relative">
+            <li style="--i: 6" data-text="Home">
+              <a href="#"
+                ><span><i class="fas fa-home"></i></span>Home</a
+              >
+            </li>
+            <li style="--i: 5" data-text="About">
+              <a href="#"
+                ><span><i class="fas fa-info-circle"></i></span>About</a
+              >
+            </li>
+            <li style="--i: 4" data-text="Services">
+              <a href="#"
+                ><span><i class="fas fa-stream"></i></span>Services</a
+              >
+            </li>
+            <li style="--i: 3" data-text="Portfolio">
+              <a href="#"
+                ><span><i class="fas fa-briefcase"></i></span>Portfolio</a
+              >
+            </li>
+            <!-- <li style="--i: 2" data-text="Team">
+              <a href="#"
+                ><span><i class="fas fa-users"></i></span>Team</a
+              >
+            </li> -->
+            <li style="--i: 1" data-text="Contact">
+              <a href="#"
+                ><span><i class="fas fa-envelope"></i></span>Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav id="menuMobile" class="myMenuMobile">
+          <div class="mobileTouch">
             <a href="#"
-              ><span><i class="fas fa-home"></i></span>Home</a
+              ><span><i class="fas fa-home me-2"></i></span>Home</a
             >
-          </li>
-          <li style="--i: 5" data-text="About">
+          </div>
+          <div class="mobileTouch">
             <a href="#"
-              ><span><i class="fas fa-info-circle"></i></span>About</a
+              ><span><i class="fas fa-info-circle me-2"></i></span>About</a
             >
-          </li>
-          <li style="--i: 4" data-text="Services">
+          </div>
+          <div class="mobileTouch">
             <a href="#"
-              ><span><i class="fas fa-stream"></i></span>Services</a
+              ><span><i class="fas fa-stream me-2"></i></span>Services</a
             >
-          </li>
-          <li style="--i: 3" data-text="Portfolio">
+          </div>
+          <div class="mobileTouch">
             <a href="#"
-              ><span><i class="fas fa-briefcase"></i></span>Portfolio</a
+              ><span><i class="fas fa-briefcase me-2"></i></span>Portfolio</a
             >
-          </li>
-          <!-- <li style="--i: 2" data-text="Team">
+          </div>
+          <div class="mobileTouch">
             <a href="#"
-              ><span><i class="fas fa-users"></i></span>Team</a
+              ><span><i class="fas fa-envelope me-2"></i></span>Contact</a
             >
-          </li> -->
-          <li style="--i: 1" data-text="Contact">
-            <a href="#"
-              ><span><i class="fas fa-envelope"></i></span>Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <section class="myBox"></section>
+          </div>
+        </nav>
+      </div>
+      <div class="myCol rightCol"></div>
     </main>
     <footer></footer>
     <script src="./script.js"></script>
