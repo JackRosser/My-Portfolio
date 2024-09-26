@@ -24,6 +24,8 @@
     @apply xl:h-[90vh];
     @apply xl:mb-[5vh];
     @apply xl:me-[5vw];
+    @apply 2xl:w-[73vw];
+    @apply lg:shadow-md;
   }
 
   .myMenu {

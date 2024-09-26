@@ -3,7 +3,7 @@ ul li {
   list-style: none;
   width: 200px;
   padding: 15px;
-  background: #3e3f46;
+  background: #fbbf24;
   z-index: calc(1 * var(--i));
   transition: 0.5s;
   cursor: pointer;
@@ -21,7 +21,7 @@ ul li:before {
   left: -40px;
   width: 40px;
   height: 100%;
-  background: #494a51;
+  background: violet;
   filter: brightness(0.7);
   transform-origin: right;
   transform: skewY(45deg);
@@ -46,7 +46,7 @@ ul li::after {
   color: rgba(0, 0, 0, 0.15);
   font-weight: 600;
   font-size: 1.5em;
-  background: #3e3f46;
+  background: violet;
   filter: brightness(0.9);
   transform-origin: bottom;
   transform: skewX(45deg);
