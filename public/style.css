@@ -578,6 +578,14 @@ video {
   margin-top: 10px;
 }
 
+.ms-5 {
+  margin-inline-start: 1.25rem;
+}
+
+.ms-20 {
+  margin-inline-start: 5rem;
+}
+
 .flex {
   display: flex;
 }
